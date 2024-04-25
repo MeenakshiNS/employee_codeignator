@@ -66,6 +66,22 @@ class Employee extends CI_Controller {
         $res['item']=$this->Emp_m->edit_item($id);
         // print_r($res['item']);
         $this->load->view('EmployeesView/edit',$res);
+
+        if($this->input->post('update')){
+            $item=array(
+                // 'emp_id'=>$this->input->post('id'),
+                'emp_name'=>$this->input->post('employee-name'),
+                  'designation'=>$this->input->post('designation'),
+                    'email'=>$this->input->post('employee-id'),
+                      'mobile'=>  $this->input->post('mob-number'),
+                      'avatar'=>$this->input->post('avatar')
+
+            );
+            // print_r($item);
+            $this->Emp_m->update_records($item,$id);
+
+
+        }
     }
 
     function delete(){

@@ -92,7 +92,7 @@
   <h2>Edit Employee</h2>
   <?php  print_r($item[0])?>
 
-  <form action="#" method="post">
+  <form action="" method="post">
     <div class="form-group">
       <label for="avatar">Avatar</label>
       <input type="file"  id="avatar" name="avatar" class="avatar-input" accept="image/*">
@@ -125,7 +125,7 @@
       <label for="mob-number">Mobile Number</label>
       <input type="number" id="mob-number" name="mob-number" value="<?php  echo $item[0]->mobile; ?>" required>
     </div>
-    <button type="submit" class="submit-btn">Save Changes</button>
+    <input type="submit" class="submit-btn" name="update">
   </form>
 </div>
 
